@@ -19,6 +19,8 @@ namespace WifiTest
                 if (error != 0)
                 {
                     Console.WriteLine("Wifi is not available");
+                    Console.WriteLine("Press any key for exit...");
+                    Console.ReadLine();
                     return;
                 }
 
@@ -83,7 +85,7 @@ namespace WifiTest
                     Interop.WlanCloseHandle(clientHandle, IntPtr.Zero);
                 }
             }
-
+            Console.WriteLine("Press any key for exit...");
             Console.ReadLine();
         }
     }
